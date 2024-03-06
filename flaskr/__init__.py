@@ -31,7 +31,16 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
+#parte de empleados
     from . import employees
     app.register_blueprint(employees.bp)
+
+#parte de departamentos
+    from . import departments
+    app.register_blueprint(departments.bp)
+
+#parte de trabajos
+    from . import jobs
+    app.register_blueprint(jobs.bp)
 
     return app

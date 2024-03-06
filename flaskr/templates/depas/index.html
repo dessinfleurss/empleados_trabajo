@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Empleados{% endblock %}</h1>
+  <h1>{% block title %}Departamentos{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-  {% for e in employees %}
+  {% for e in departments %}
         <div>
-          <h4>{{ e['departamento'] }} - {{ e['nombre'] }} {{ e['apellido'] }}</h4> 
+          <h4>{{ e['departamentos'] }} - {{ e['ciudad'] }} - {{ e['provincia'] }} - {{ e['pais'] }}</h4> 
         </div>
     {% if not loop.last %}
       <hr>

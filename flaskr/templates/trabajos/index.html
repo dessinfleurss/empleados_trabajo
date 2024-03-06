@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Empleados{% endblock %}</h1>
+  <h1>{% block title %}Trabajos{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-  {% for e in employees %}
+  {% for j in jobs %}
         <div>
-          <h4>{{ e['departamento'] }} - {{ e['nombre'] }} {{ e['apellido'] }}</h4> 
+          <h4>{{ j['trabajo'] }} - {{ j['salario_minimo'] }} - {{ j['salario_maximo'] }}</h4> 
         </div>
     {% if not loop.last %}
       <hr>
