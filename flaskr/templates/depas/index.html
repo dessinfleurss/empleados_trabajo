@@ -5,9 +5,10 @@
 {% endblock %}
 
 {% block content %}
-  {% for e in departments %}
+  {% for d in departments %}
         <div>
-          <h4>{{ e['departamentos'] }} - {{ e['ciudad'] }} - {{ e['provincia'] }} - {{ e['pais'] }}</h4> 
+          <a href="{{ url_for('departments.detalle', id=d['id']) }}">
+          <h4>{{ d['nombre'] }}</h4></a>
         </div>
     {% if not loop.last %}
       <hr>

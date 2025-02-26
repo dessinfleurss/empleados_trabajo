@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Departamentos{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div>
+
+   <h4>{{ d['nombre'] }}</h4>
+    <h5>Direccion</h5>
+    <p>
+    {{ d['ciudad'] }} - {{ d['provincia'] }} - {{ d['pais'] }}</h4> 
+  </p>
+  </div>
+{% endblock %}
